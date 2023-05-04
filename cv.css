@@ -1,0 +1,220 @@
+/*css reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*generals*/
+.general-container{
+    max-width: 1000px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+/*utilities*/
+.mb-20{
+    margin-bottom: 20px;
+}
+.p-20{
+    padding: 20px;
+}
+
+/*header section*/
+
+header{  
+    display: flex;
+}
+
+.img-profile-container{
+    width: 300px;
+}
+
+.img-profile{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.name{
+    margin-bottom: 10px;
+}
+
+.main-infos{
+    margin-top: 40px;
+}
+
+/*main section*/
+
+
+.container-education,.container-job{
+    border-top: 1px solid black;
+    display: flex;
+       
+}
+
+.education-title-container,.job-title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid black;
+    flex-basis: 30%;
+}
+.instruction-title,.job-title{
+    margin-top: 30px;
+    text-align: center;
+}
+.description-container{
+    padding:20px;
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.book{
+    width: 70%;
+    height: 70%;
+}
+
+/*titles and descriptions section*/
+
+
+.pc{
+    padding: 20px;
+    margin: 40px 0px 20px 0px;
+    width: 100%;
+    height: auto;
+}
+
+.pt-list-jobs{
+    margin-left: 50px;
+}
+
+/*footer section*/
+
+footer{
+    display: flex;
+}
+
+.tecnologies,.main-skills{
+    flex-basis: 50%;
+}
+
+.technologies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+.icons-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+}
+.icon{
+    width: 100%;
+    height: auto;
+}
+.main-skills{
+    border-top: 1px solid black;
+}
+
+.skills-container{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.title-patenti{
+    margin-top: 40px;
+}
+
+/*sezione Tabella */
+.table{  
+    width: 100%;
+}
+.title-row{
+    background-color: rgb(241, 241, 241) !important;
+}
+
+th,td{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.table tr:nth-child(even) { background-color: #CCCCCC; }
+
+.table tr:nth-child(odd) { background-color: rgb(83, 204, 204); }
+
+tr:nth-child(odd):hover{
+    background-color: rgb(83, 204, 204);
+}
+
+tr:hover{
+    background-color: rgb(83, 204, 204) !important;
+}
+
+
+/*Responsive media*/
+
+@media screen and (max-width: 425px){
+    header{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .technologies{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-education,.container-job{
+        flex-direction: column;
+    }
+    .main-skills{
+        margin-bottom: 20px;
+    }
+    footer{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 535px){
+   
+    thead {
+        display: none;
+        visibility: hidden;
+      }
+    tbody, tr, th, td {
+        display: block;
+        text-align: left;
+        border: 0;      
+        padding: 5px; 
+        white-space: normal;
+      }
+
+    th[data-title]:before,
+    td[data-title]:before {
+        content: attr(data-title) ":";
+        font-weight: bold;
+        display: inline-block;
+        width: 110px;
+    }
+    th:not([data-title]) {
+      font-weight: bold;
+    }
+    footer{
+        border-bottom: 1px solid black;
+    }
+}
